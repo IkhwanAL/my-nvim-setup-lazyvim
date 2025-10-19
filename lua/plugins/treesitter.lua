@@ -12,6 +12,7 @@ return {
       "css",
       "sql",
       "zig",
+      "htmx",
     },
     highlight = {
       enable = true,
