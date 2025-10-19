@@ -6,3 +6,7 @@ local map = vim.keymap.set
 
 map("n", "<S-Left>", "<cmd>bprevious<cr>", { desc = "Prev Buffer" })
 map("n", "<S-Right>", "<cmd>bnext<cr>", { desc = "Next Buffer" })
+
+map("n", "<C-Del>", function()
+  Snacks.bufdelete()
+end, { desc = "Delete Buffer" })
