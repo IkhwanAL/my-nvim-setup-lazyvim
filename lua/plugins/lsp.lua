@@ -1,25 +1,11 @@
 return {
   "neovim/nvim-lspconfig",
-  opts = {
-    servers = {
-      zls = {},
-      vtsls = {},
-      templ = {},
-      sqls = {},
-      tailwindcss = {
-        filetypes = {
-          "html",
-          "templ",
-          "css",
-          "scss",
-          "javascript",
-        },
-        init_options = {
-          userLanguages = {
-            templ = "html",
-          },
-        },
-      },
-    },
-  },
+  opts = function(_, opts)
+    opts.servers = opts.servers or {}
+    opts.servers.zls = {}
+    opts.servers.vtsls = {}
+    opts.servers.templ = {}
+    opts.servers.sqls = {}
+    opts.servers.html = {}
+  end,
 }
