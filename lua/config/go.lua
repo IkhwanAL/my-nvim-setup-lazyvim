@@ -1,7 +1,6 @@
 -- lua/config/go.lua
 -- Minimal Go IDE setup for LazyVim
 
-local lspconfig = require("lspconfig")
 local dap = require("dap")
 local ts = require("nvim-treesitter.configs")
 
@@ -19,7 +18,7 @@ ts.setup({
 -- =====================
 -- LSP (gopls)
 -- =====================
-lspconfig.gopls.setup({
+vim.lsp.config["gopls"] = {
   on_attach = function(_, bufnr)
     local opts = { noremap = true, silent = true, buffer = bufnr }
 
@@ -36,7 +35,7 @@ lspconfig.gopls.setup({
       staticcheck = true,
     },
   },
-})
+}
 
 -- =====================
 -- Test Runner (vim-test)

@@ -12,6 +12,7 @@ return {
         "javascript",
         "javascriptreact",
         "typescriptreact",
+        "python",
       },
       settings = {
         tailwindCSS = {

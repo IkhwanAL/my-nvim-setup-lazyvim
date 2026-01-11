@@ -15,6 +15,9 @@ return {
       "sql",
       "zig",
       "htmx",
+      "python",
+      "c",
+      "cpp",
     })
 
     opts.highlight = opts.highlight or {}

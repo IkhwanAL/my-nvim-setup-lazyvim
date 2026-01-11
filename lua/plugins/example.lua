@@ -56,20 +56,6 @@ return {
     },
   },
 
-  -- add more treesitter parsers
-  {
-    "nvim-treesitter/nvim-treesitter",
-    opts = {
-      ensure_installed = {
-        "lua",
-        "vim",
-        "go",
-        "gomod",
-        "templ",
-      },
-    },
-  },
-
   -- the opts function can also be used to change the default opts:
   {
     "nvim-lualine/lualine.nvim",
