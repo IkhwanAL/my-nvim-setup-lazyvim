@@ -8,7 +8,7 @@ local ts = require("nvim-treesitter.configs")
 -- Treesitter
 -- =====================
 ts.setup({
-  ensure_installed = { "go", "gomod" }, -- always install Go parsers
+  ensure_installed = { "go", "gomod" },
   highlight = { enable = true },
   indent = { enable = true },
   incremental_selection = { enable = true },

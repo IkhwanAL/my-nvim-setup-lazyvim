@@ -28,7 +28,7 @@ return {
   },
 
   -- disable trouble
-  { "folke/trouble.nvim", enabled = false },
+  -- { "folke/trouble.nvim", enabled = false },
 
   -- override nvim-cmp and add cmp-emoji
 
@@ -86,50 +86,6 @@ return {
   -- add jsonls and schemastore packages, and setup treesitter for json, json5 and jsonc
   { import = "lazyvim.plugins.extras.lang.json" },
 
-  {
-    "ThePrimeagen/harpoon",
-    branch = "harpoon2",
-    opts = {
-      menu = {
-        width = vim.api.nvim_win_get_width(0) - 4,
-      },
-      settings = {
-        save_on_toggle = true,
-      },
-    },
-    keys = function()
-      local keys = {
-        {
-          "<leader>H",
-          function()
-            require("harpoon"):list():add()
-          end,
-          desc = "Harpoon File",
-        },
-        {
-          "<leader>h",
-          function()
-            local harpoon = require("harpoon")
-            harpoon.ui:toggle_quick_menu(harpoon:list())
-          end,
-          desc = "Harpoon Quick Menu",
-        },
-      }
-
-      for i = 1, 9 do
-        table.insert(keys, {
-          "<leader>" .. i,
-          function()
-            require("harpoon"):list():select(i)
-          end,
-          desc = "Harpoon to File " .. i,
-        })
-      end
-      return keys
-    end,
-  },
-
-  -- { import = "lazyvim.plugins.extras.editor.harphoon2" },
   -- add any tools you want to have installed below
   {
     "williamboman/mason.nvim",
@@ -139,6 +95,8 @@ return {
         "shellcheck",
         "shfmt",
         "flake8",
+        "java-debug-adapter",
+        "java-test",
       },
     },
   },

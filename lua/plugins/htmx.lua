@@ -3,9 +3,9 @@ return {
   opts = function(_, opts)
     opts.servers = opts.servers or {}
 
-    opts.servers.htmx = {
-      cmd = { "htmx-lsp" },
-      filetypes = { "html" },
-    }
+    -- opts.servers.htmx = {
+    --   cmd = { "htmx-lsp" },
+    --   filetypes = { "html" },
+    -- }
   end,
 }
