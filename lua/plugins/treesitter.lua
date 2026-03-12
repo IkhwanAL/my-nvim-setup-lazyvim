@@ -11,7 +11,6 @@ return {
       "gomod",
       "html",
       "css",
-      "sql",
       "zig",
       "htmx",
       "python",

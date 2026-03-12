@@ -4,7 +4,6 @@ return {
     opts.servers = opts.servers or {}
     opts.servers.zls = {}
     opts.servers.vtsls = {}
-    opts.servers.sqls = {}
     opts.servers.html = {}
   end,
 }
